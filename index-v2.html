@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Invoice Tracker — $9 Invoicing for Freelancers</title>
+<meta name="description" content="Dead-simple invoicing for freelancers. Create invoices, send PDFs, track payments. $9 one-time. No subscriptions.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        bg: '#F7F6F3',
+        bgalt: '#EFEEE9',
+        ink: '#2D2D2D',
+        muted: '#6B6B6B',
+        accent: '#E8913A',
+        accenthover: '#D17E2E',
+        green: '#3D8B37',
+      }
+    }
+  }
+}
+</script>
+<style>
+html { scroll-behavior: smooth; }
+details summary { cursor: pointer; }
+details summary::-webkit-details-marker { display: none; }
+details summary::marker { display: none; content: ''; }
+</style>
+</head>
+<body class="bg-bg text-ink antialiased">
+
+<!-- Hero -->
+<section class="min-h-[85vh] flex items-center justify-center px-6 py-20">
+  <div class="max-w-2xl text-center">
+    <p class="inline-block mb-6 px-4 py-1.5 bg-orange-50 text-accent text-sm font-medium rounded-full">Stop paying $15/mo for invoicing</p>
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+      Invoicing for freelancers<br class="hidden sm:block"> who hate invoicing software.
+    </h1>
+    <p class="text-lg sm:text-xl text-muted mb-10 max-w-xl mx-auto">
+      Create an invoice. Send the PDF. Mark it paid. No accounting bloat, no monthly fees, no account required.
+    </p>
+    <a href="#pricing" class="inline-block px-8 py-4 bg-accent hover:bg-accenthover text-white font-semibold rounded-lg transition-colors text-lg">
+      Get Invoice Tracker · $9
+    </a>
+    <p class="text-sm text-muted mt-4">One-time payment. 30-day money-back guarantee.</p>
+  </div>
+</section>
+
+<!-- Social Proof Bar -->
+<section class="py-8 px-6 bg-bgalt">
+  <div class="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 text-sm text-muted text-center">
+    <span><strong class="text-ink">$9 once</strong> vs $15/mo for FreshBooks</span>
+    <span class="hidden sm:inline">·</span>
+    <span><strong class="text-ink">No account</strong> required</span>
+    <span class="hidden sm:inline">·</span>
+    <span><strong class="text-ink">30-day</strong> money-back guarantee</span>
+  </div>
+</section>
+
+<!-- Pain Points -->
+<section class="py-20 px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-2xl sm:text-3xl font-bold text-center mb-14">Everything you need. Nothing you don't.</h2>
+    <div class="grid md:grid-cols-3 gap-10">
+      <div class="text-center">
+        <div class="w-14 h-14 bg-orange-50 text-accent rounded-2xl flex items-center justify-center mx-auto mb-5 text-2xl font-bold">1</div>
+        <h3 class="font-semibold text-lg mb-2">Create invoices in seconds</h3>
+        <p class="text-muted text-sm">Fill in client, amount, due date. Hit send. No templates to configure, no 47-field forms.</p>
+      </div>
+      <div class="text-center">
+        <div class="w-14 h-14 bg-orange-50 text-accent rounded-2xl flex items-center justify-center mx-auto mb-5 text-2xl font-bold">2</div>
+        <h3 class="font-semibold text-lg mb-2">Send a professional PDF</h3>
+        <p class="text-muted text-sm">Clean PDF invoices delivered straight to your client. Looks professional. Takes one click.</p>
+      </div>
+      <div class="text-center">
+        <div class="w-14 h-14 bg-orange-50 text-accent rounded-2xl flex items-center justify-center mx-auto mb-5 text-2xl font-bold">3</div>
+        <h3 class="font-semibold text-lg mb-2">Track who owes you</h3>
+        <p class="text-muted text-sm">See paid and unpaid at a glance. Mark invoices done when money lands. That's it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Comparison -->
+<section class="py-20 px-6 bg-bgalt">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-2xl sm:text-3xl font-bold text-center mb-12">You're overpaying for invoicing.</h2>
+    <div class="overflow-x-auto">
+      <table class="w-full text-left text-sm">
+        <thead>
+          <tr class="border-b-2 border-ink/10">
+            <th class="py-3 pr-4"></th>
+            <th class="py-3 px-4 text-center font-bold text-accent">Invoice Tracker</th>
+            <th class="py-3 px-4 text-center text-muted">FreshBooks</th>
+            <th class="py-3 px-4 text-center text-muted">Wave</th>
+          </tr>
+        </thead>
+        <tbody class="text-muted">
+          <tr class="border-b border-ink/5">
+            <td class="py-3 pr-4 font-medium text-ink">Price</td>
+            <td class="py-3 px-4 text-center font-bold text-accent">$9 once</td>
+            <td class="py-3 px-4 text-center">$17/mo</td>
+            <td class="py-3 px-4 text-center">Free*</td>
+          </tr>
+          <tr class="border-b border-ink/5">
+            <td class="py-3 pr-4 font-medium text-ink">Create invoices</td>
+            <td class="py-3 px-4 text-center">Yes</td>
+            <td class="py-3 px-4 text-center">Yes</td>
+            <td class="py-3 px-4 text-center">Yes</td>
+          </tr>
+          <tr class="border-b border-ink/5">
+            <td class="py-3 pr-4 font-medium text-ink">PDF export</td>
+            <td class="py-3 px-4 text-center">Yes</td>
+            <td class="py-3 px-4 text-center">Yes</td>
+            <td class="py-3 px-4 text-center">Yes</td>
+          </tr>
+          <tr class="border-b border-ink/5">
+            <td class="py-3 pr-4 font-medium text-ink">Account required</td>
+            <td class="py-3 px-4 text-center font-bold text-green">No</td>
+            <td class="py-3 px-4 text-center">Yes</td>
+            <td class="py-3 px-4 text-center">Yes</td>
+          </tr>
+          <tr class="border-b border-ink/5">
+            <td class="py-3 pr-4 font-medium text-ink">Accounting features</td>
+            <td class="py-3 px-4 text-center text-muted">No (by design)</td>
+            <td class="py-3 px-4 text-center">Yes</td>
+            <td class="py-3 px-4 text-center">Yes</td>
+          </tr>
+          <tr>
+            <td class="py-3 pr-4 font-medium text-ink">Annual cost (Year 1)</td>
+            <td class="py-3 px-4 text-center font-bold text-accent">$9</td>
+            <td class="py-3 px-4 text-center">$204</td>
+            <td class="py-3 px-4 text-center">$0*</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-xs text-muted mt-4 text-center">*Wave is free but requires account creation, shows ads, and upsells payment processing.</p>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section id="pricing" class="py-20 px-6">
+  <div class="max-w-md mx-auto text-center">
+    <h2 class="text-2xl sm:text-3xl font-bold mb-4">One price. Yours forever.</h2>
+    <p class="text-muted mb-10">No subscriptions. No hidden fees. No "starter plan" bait-and-switch.</p>
+    <div class="bg-white border-2 border-accent rounded-2xl p-8 shadow-lg">
+      <div class="text-5xl font-extrabold mb-2">$9</div>
+      <p class="text-muted text-sm mb-6">One-time payment · Lifetime access · All future updates</p>
+      <a href="#" class="block w-full px-6 py-4 bg-accent hover:bg-accenthover text-white font-semibold rounded-lg transition-colors text-lg text-center">
+        Get Invoice Tracker · $9
+      </a>
+      <p class="text-xs text-muted mt-4">30-day money-back guarantee. Not happy? Email us for a full refund.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Trust Signals -->
+<section class="py-12 px-6 bg-bgalt">
+  <div class="max-w-3xl mx-auto grid sm:grid-cols-3 gap-8 text-center text-sm">
+    <div>
+      <div class="font-semibold text-ink mb-1">No account needed</div>
+      <p class="text-muted">Download, use, done. No sign-up, no password, no email verification.</p>
+    </div>
+    <div>
+      <div class="font-semibold text-ink mb-1">30-day refund</div>
+      <p class="text-muted">Full refund if it's not for you. No questions asked.</p>
+    </div>
+    <div>
+      <div class="font-semibold text-ink mb-1">Free updates forever</div>
+      <p class="text-muted">Every improvement we ship is included. No upgrade fees.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-20 px-6">
+  <div class="max-w-2xl mx-auto">
+    <h2 class="text-2xl sm:text-3xl font-bold text-center mb-12">Questions</h2>
+
+    <details class="border-b border-ink/10 py-5 group">
+      <summary class="flex justify-between items-center font-semibold text-ink">
+        Who is this for?
+        <span class="text-muted group-open:rotate-45 transition-transform text-xl">+</span>
+      </summary>
+      <p class="text-muted text-sm mt-3">Freelancers, contractors, and solopreneurs who send fewer than 50 invoices a month and don't need full accounting software. If you're using a spreadsheet or Word doc right now, this is the upgrade.</p>
+    </details>
+
+    <details class="border-b border-ink/10 py-5 group">
+      <summary class="flex justify-between items-center font-semibold text-ink">
+        Does it handle taxes or accounting?
+        <span class="text-muted group-open:rotate-45 transition-transform text-xl">+</span>
+      </summary>
+      <p class="text-muted text-sm mt-3">No. This is an invoicing tool, not accounting software. You create invoices, send them, and track payment status. If you need expense tracking, payroll, or tax filing, use something like FreshBooks or Xero.</p>
+    </details>
+
+    <details class="border-b border-ink/10 py-5 group">
+      <summary class="flex justify-between items-center font-semibold text-ink">
+        What if I want a refund?
+        <span class="text-muted group-open:rotate-45 transition-transform text-xl">+</span>
+      </summary>
+      <p class="text-muted text-sm mt-3">Email us within 30 days for a full refund. No forms, no hoops, no guilt trip.</p>
+    </details>
+
+    <details class="border-b border-ink/10 py-5 group">
+      <summary class="flex justify-between items-center font-semibold text-ink">
+        Why $9 when others charge $15/mo?
+        <span class="text-muted group-open:rotate-45 transition-transform text-xl">+</span>
+      </summary>
+      <p class="text-muted text-sm mt-3">Those tools bundle invoicing with accounting, payroll, and features most freelancers never touch. We built the invoicing part only and priced it as a one-time purchase. You pay once, you own it.</p>
+    </details>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="py-20 px-6 bg-bgalt">
+  <div class="max-w-xl mx-auto text-center">
+    <h2 class="text-2xl sm:text-3xl font-bold mb-4">Ready to stop overpaying?</h2>
+    <p class="text-muted mb-8">Ditch your monthly invoicing subscription for a one-time $9 payment.</p>
+    <a href="#pricing" class="inline-block px-8 py-4 bg-accent hover:bg-accenthover text-white font-semibold rounded-lg transition-colors text-lg">
+      Get Invoice Tracker · $9
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-10 text-center text-sm text-muted">
+  <p>&copy; 2026 Simple Invoice Tracker</p>
+</footer>
+
+<!-- Mobile Sticky CTA -->
+<div class="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur border-t border-ink/10 p-3 sm:hidden z-50" id="stickyCta" style="display:none;">
+  <a href="#pricing" class="block w-full px-6 py-3 bg-accent hover:bg-accenthover text-white font-semibold rounded-lg transition-colors text-center text-base">
+    Get Invoice Tracker · $9
+  </a>
+</div>
+
+<script>
+// Show sticky CTA after scrolling past hero
+const sticky = document.getElementById('stickyCta');
+const observer = new IntersectionObserver(([e]) => {
+  sticky.style.display = e.isIntersecting ? 'none' : 'block';
+}, { threshold: 0 });
+observer.observe(document.querySelector('section'));
+</script>
+
+</body>
+</html>
